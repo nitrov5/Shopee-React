@@ -76,19 +76,26 @@ const Catalog = () => {
             <div className='group relative catalog-container'>
                 <Swiper
                     modules={[Navigation, Grid]}
-                    slidesPerView={10}
-                    slidesPerGroup={10}
+                    slidesPerView={6}
+                    slidesPerGroup={6}
                     spaceBetween={0}
                     grid={{ rows: 2, fill: "row" }}
                     navigation={{
                         nextEl: ".catalog-next",
                         prevEl: ".catalog-prev",
                     }}
+                    breakpoints={{
+                        1024: {
+                            slidesPerView: 10,
+                            slidesPerGroup: 10,
+                            grid: { rows: 2, fill: "row" }
+                        }
+                    }}
                     className='catalog-swiper '>
                     {DUMMY_CATALOG.map((item) => (
                         <SwiperSlide
                             key={uuid()}
-                            className=' hover:shadow-md  border border-gray-200/80 text-sm text-gray-400   h-auto'>
+                            className=' hover:shadow-lg  border border-gray-200/80 text-sm text-gray-400   h-auto'>
                             <a href={item.aSrc} className='h-36 w-full  flex flex-col items-center '>
                                 <img
                                     src={item.imgSrc}

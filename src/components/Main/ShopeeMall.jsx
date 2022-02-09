@@ -182,15 +182,21 @@ const ShopeeMall = () => {
                         slidesPerView={4}
                         slidesPerGroup={4}
                         allowTouchMove={true}
+                        grid={{ rows: 2, fill: "row" }}
                         breakpoints={{
                             768: {
                                 allowTouchMove: true,
+                                grid: {
+                                    rows: 2, fill: 'row'
+                                }
                             },
                             1200: {
                                 allowTouchMove: false,
+                                grid: {
+                                    rows: 2, fill: 'row'
+                                }
                             },
                         }}
-                        grid={{ rows: 2, fill: "row" }}
                         navigation={{
                             nextEl: ".shopee-mall-product-next",
                             prevEl: ".shopee-mall-product-prev",

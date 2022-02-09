@@ -114,11 +114,17 @@ const FlashSale = () => {
             <div className='flash-sale-items   group relative  '>
                 <Swiper
                     modules={[Navigation]}
-                    slidesPerView={6}
-                    slidesPerGroup={6}
+                    slidesPerView={4}
+                    slidesPerGroup={4}
                     navigation={{
                         nextEl: ".flash-sale-next",
                         prevEl: ".flash-sale-prev",
+                    }}
+                    breakpoints={{
+                        1024: {
+                            slidesPerView: 6,
+                            slidesPerGroup: 6
+                        }
                     }}
                     tag={"ul"}
                     className=' flash-sale-swiper h-full  '>
@@ -158,9 +164,9 @@ const FlashSale = () => {
                     <ViewMore />
                 </Swiper>
 
-                <CircleNext customClass={"flash-sale-next"} />
+                <CircleNext customClass={"flash-sale-next  "}  />
 
-                <CirclePrev customClass={"flash-sale-prev"} />
+                <CirclePrev customClass={"flash-sale-prev "} />
             </div>
         </section>
     );
