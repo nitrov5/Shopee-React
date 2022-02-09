@@ -73,7 +73,7 @@ const Catalog = () => {
                 </a>
             </div>
 
-            <div className='group relative'>
+            <div className='group relative catalog-container'>
                 <Swiper
                     modules={[Navigation, Grid]}
                     slidesPerView={10}
@@ -84,18 +84,18 @@ const Catalog = () => {
                         nextEl: ".catalog-next",
                         prevEl: ".catalog-prev",
                     }}
-                    className='catalog-swiper border border-red-800'>
+                    className='catalog-swiper '>
                     {DUMMY_CATALOG.map((item) => (
                         <SwiperSlide
                             key={uuid()}
-                            className='h-1/2 hover:shadow-md border border-sky-600 text-sm text-gray-400   '>
-                            <a href={item.aSrc} className=' border border-red-500'>
+                            className=' hover:shadow-md  border border-gray-200/80 text-sm text-gray-400   h-auto'>
+                            <a href={item.aSrc} className='h-36 w-full  flex flex-col items-center '>
                                 <img
                                     src={item.imgSrc}
                                     alt={item.descr}
-                                    className='p-4 h-2/3 w-full object-cover border'
+                                    className='p-4 h-2/3  object-cover  '
                                 />
-                                <p className=' px-2 line-clamp-2 h-1/3   text-center  text-black overflow-hidden  '>
+                                <p className=' px-2 line-clamp-2  text-center  text-gray-800 '>
                                     {item.descr}
                                 </p>
                             </a>

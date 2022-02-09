@@ -176,7 +176,7 @@ const ShopeeMall = () => {
                     </Swiper>
                 </div>
 
-                <div className='shopee-mall-products group   w-full md:w-2/3 h-full relative'>
+                <div className='shopee-mall-product-container group   w-full md:w-2/3 h-full relative'>
                     <Swiper
                         modules={[Navigation, Grid]}
                         slidesPerView={4}
