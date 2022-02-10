@@ -26,10 +26,10 @@ const MainBanner = () => {
     ];
 
     return (
-        <div className='banner w-full md:h-56 md:gap-1 flex items-center lg:px-10 xl:px-40 mx-auto bg-white   '>
-            <div className='main-banner overflow-hidden rounded h-32 md:h-full md:w-2/3 w-full text-gray-800'>
+        <div className='banner w-full  md:h-56 md:gap-1 flex items-center lg:px-10 xl:px-40 mx-auto bg-white  '>
+            <div className='  main-banner overflow-hidden rounded h-32 md:h-full md:w-2/3 w-full text-gray-800 '>
                 <Swiper
-                    className='main-banner-swiper h-full relative group '
+                    className='main-banner-swiper h-full relative group z-30'
                     modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
                     slidesPerView={1}
                     pagination={{ clickable: true }}
@@ -48,7 +48,7 @@ const MainBanner = () => {
                    <ButtonPrev />
                 </Swiper>
             </div>
-            <div className='swiper-pagination-1 absolute z-50 text-center'></div>
+          
 
             <div className='right-banner hidden h-32 md:h-full rounded overflow-hidden md:w-1/3 md:flex flex-col items-start gap-1'>
                 <img src='./images/right-banner-1.png' alt='' className='h-1/2 w-full object-cover' />

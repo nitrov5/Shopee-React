@@ -8,8 +8,8 @@ import StackBanner from "./StackBanner";
 
 const Main = () => {
     return (
-        <main className='flex flex-col gap-2 md:gap-0 md:space-y-4 bg-gray-100 lg:mt-7 w-full overflow-hidden '>
-            <div className='flex flex-col'>
+        <main className='flex flex-col gap-2 md:gap-0 md:space-y-4 bg-gray-100 lg:mt-7 w-full  '>
+            <div className='flex flex-col relative z-10'>
                 <MainBanner />
                 <MainCatalog />
             </div>
