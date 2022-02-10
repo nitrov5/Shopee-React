@@ -1,6 +1,9 @@
-import React from 'react'
-import ThongBao from './UI/ThongBao';
-import UngDung from './UI/UngDung';
+import React from "react";
+import Badge from "./UI/Badge";
+import ChevronDown from "./UI/ChevronDown";
+import Languages from "./UI/Languages";
+import ThongBao from "./UI/ThongBao";
+import UngDung from "./UI/UngDung";
 
 const Header = () => {
     return (
@@ -128,7 +131,7 @@ const Header = () => {
                     </a>
                     <a
                         href='#'
-                        className='py-2 transition-all hover:opacity-60 flex items-center gap-1'>
+                        className='py-2  relative z-20 group transition-all  flex  items-center gap-1'>
                         <svg
                             xmlns='http://www.w3.org/2000/svg'
                             className='h-5 w-5'
@@ -142,7 +145,9 @@ const Header = () => {
                                 d='M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9'
                             />
                         </svg>
-                        <span>Tiếng Việt</span>
+                        <span className='group-hover:opacity-60'>Tiếng Việt</span>
+                        <ChevronDown />
+                        <Languages />
                     </a>
                     <a
                         href='#'
@@ -239,10 +244,10 @@ const Header = () => {
                         </a>
                     </nav>
                 </div>
-                <div className='badge w-24 flex justify-center cursor-pointer relative group'>
+                <div className='badge flex justify-center cursor-pointer relative group   mr-16'>
                     <svg
                         xmlns='http://www.w3.org/2000/svg'
-                        className='h-6 w-6'
+                        className='h-6 w-6 mb-4'
                         fill='none'
                         viewBox='0 0 24 24'
                         stroke='currentColor'>
@@ -253,13 +258,11 @@ const Header = () => {
                             d='M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z'
                         />
                     </svg>
-                    <div className='cart bg-white w-96 h-96 absolute z-50 right-0 hidden group-hover:flex'>
-                        <h3 className='text-sky-700'>Chưa có sản phẩm</h3>
-                    </div>
+                   <Badge />
                 </div>
             </div>
         </header>
     );
-}
+};
 
-export default Header
+export default Header;
