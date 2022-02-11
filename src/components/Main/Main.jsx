@@ -1,10 +1,12 @@
 import Catalog from "./Catalog";
 import FlashSale from "./FlashSale";
+import FluentlySearch from "./FluentlySearch";
 import MainBanner from "./MainBanner";
 import MainCatalog from "./MainCatalog";
 import SecondLogo from "./SecondLogo";
 import ShopeeMall from "./ShopeeMall";
 import StackBanner from "./StackBanner";
+import TopSearch from "./TopSearch";
 
 const Main = () => {
     return (
@@ -19,6 +21,8 @@ const Main = () => {
             <FlashSale />
             <StackBanner />
             <ShopeeMall />
+            <FluentlySearch />
+            <TopSearch />
         </main>
     );
 };
