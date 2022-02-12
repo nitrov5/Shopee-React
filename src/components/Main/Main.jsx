@@ -10,7 +10,7 @@ import TopSearch from "./TopSearch";
 
 const Main = () => {
     return (
-        <main className='flex flex-col gap-2 md:gap-0 md:space-y-4 bg-gray-100 lg:mt-7 w-full  '>
+        <main className='flex flex-col gap-2 md:gap-0 md:space-y-4 bg-gray-100 md:mt-7 w-full  '>
             <div className='flex flex-col relative z-10'>
                 <MainBanner />
                 <MainCatalog />

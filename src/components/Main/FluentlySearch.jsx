@@ -1,5 +1,5 @@
 import DefaultTitle from "../UI/DefaultTitle";
-
+import {v4 as uuid} from 'uuid';
 const FluentlySearch = () => {
     const DataList = [
         {
@@ -41,7 +41,7 @@ const FluentlySearch = () => {
 
             <div className='fluently-search-list grid grid-cols-2 md:grid-cols-4 justify-center'>
                 {DataList.map((item) => (
-                    <a href={item.href} className='flex items-center pt-2 pb-2 pl-2 pr-1 border'>
+                    <a key={uuid()} href={item.href} className='flex items-center pt-2 pb-2 pl-2 pr-1 border'>
                         <div className='w-1/2'>
                             <p className='truncate whitespace-nowrap text-black'>{item.title}</p>
                             <p className='text-gray-400 text-xs whitespace-nowrap truncate'>

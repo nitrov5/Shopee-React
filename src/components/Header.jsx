@@ -7,10 +7,10 @@ import UngDung from "./UI/UngDung";
 
 const Header = () => {
     return (
-        <header className='lg:bg-orange-600  border   xl:px-40 lg:sticky  w-full z-20'>
+        <header id="header" className='md:bg-orange-600  border   xl:px-40 lg:sticky lg:top-0 w-full z-20'>
             {/* Nav mobile  */}
-            <nav className='h-10 absolute flex lg:hidden z-40 top-0 left-0 right-0 p-2 items-center   gap-2'>
-                <div className='search flex items-center justify-center w-2/3 bg-white rounded px-2 ml-6'>
+            <nav className='h-12 absolute flex md:hidden z-20 top-0 left-0 right-0 p-2 items-center   gap-2 '>
+                <div className='h-full search flex items-center justify-center w-2/3 bg-white rounded px-2 ml-6 '>
                     <svg
                         xmlns='http://www.w3.org/2000/svg'
                         className='h-6 w-6 text-zinc-400'
@@ -26,8 +26,8 @@ const Header = () => {
                     </svg>
                     <input
                         type='text'
-                        className='rounded pl-2 placeholder:text-red-400 w-full h-full text-xs'
-                        placeholder='GIẢM GIÁ ĐẾN 90%'
+                        className='rounded pl-2 placeholder:text-red-400 w-full  text-sm h-full uppercase font-semibold truncate'
+                        placeholder='GIẢM GIÁ ĐẾN 90% sjldkf sdkfjlsd fskldj'
                     />
                 </div>
                 <div className=''>
@@ -63,7 +63,7 @@ const Header = () => {
             </nav>
 
             {/* Nav desktop */}
-            <nav className='laptop-nav hidden  lg:flex justify-between items-center text-[13px]  text-white  '>
+            <nav className='laptop-nav hidden  md:flex justify-between items-center text-[13px]  text-white  '>
                 <div className='left flex items-center gap-2  '>
                     <a
                         href='#'
@@ -161,7 +161,7 @@ const Header = () => {
             </nav>
 
             <div className='second hidden md:flex justify-between items-center text-white'>
-                <div className='logo h-full flex items-center gap-2'>
+            <div className='logo h-full flex items-center gap-2'>
                     <svg
                         xmlns='http://www.w3.org/2000/svg'
                         className='w-16 h-16'
@@ -179,12 +179,12 @@ const Header = () => {
                         <h1 className='text-3xl'>Shopee</h1>
                     </a>
                 </div>
-                <div className='search flex flex-col   w-full pt-4 flex-1 mx-10 text-gray-800   rounded-sm'>
-                    <div className='flex justify-between h-10 bg-white  w-full'>
+                <div className='search overflow-hidden flex flex-col   pt-4   mx-10 text-gray-800   rounded-sm'>
+                    <div className='flex justify-between h-10 bg-white  '>
                         <input
                             type='text'
                             placeholder='Book Club Săn Quà Chính Hãng'
-                            className='flex-auto p-2 px-4    border-none focus:outline-0 rounded'
+                            className='flex-auto p-2 px-4   bg-white border-none focus:outline-0 rounded'
                         />
                         <button
                             aria-label='search'
@@ -244,7 +244,7 @@ const Header = () => {
                         </a>
                     </nav>
                 </div>
-                <div className='badge flex justify-center cursor-pointer relative group   mr-16'>
+                <div className='badge flex justify-center cursor-pointer relative group '>
                     <svg
                         xmlns='http://www.w3.org/2000/svg'
                         className='h-6 w-6 mb-4'

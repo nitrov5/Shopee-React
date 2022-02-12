@@ -58,7 +58,7 @@ const MainCatalog = () => {
         },
     ];
     return (
-        <section className='main-catalog   flex bg-white flex-col items-center  relative xl:px-40 rounded-sm'>
+        <section className='main-catalog   flex bg-white mt-0 md:mt-auto flex-col items-center  relative xl:px-40 rounded-sm'>
             <Swiper
                 slidesPerView={5}
                 spaceBetween={10}
@@ -80,9 +80,9 @@ const MainCatalog = () => {
                     <SwiperSlide
                         key={uuid()}
                         tag={"a"}
-                        className='hover:scale-y-110 transition-all flex flex-col items-center justify-start cursor-pointer h-full'>
+                        className='hover:scale-y-110 transition-all flex flex-col items-center justify-start cursor-pointer w-24 md:w-auto '>
                         <img src={slide.imgSrc} className='w-10 h-10' alt='' />
-                        <p className='text-xs text-center font-normal line-clamp-2 py-2 md:text-sm'>
+                        <p className='text-[12px] text-center font-normal line-clamp-2 py-2 md:text-sm'>
                             {slide.descr}
                         </p>
                     </SwiperSlide>
