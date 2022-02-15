@@ -55,15 +55,51 @@ const MainCatalog = () => {
         {
             imgSrc: "./images/menuItems/4.png",
             descr: "Shopee Food - Đại tiệc - 50%",
-        },
-    ];
+        }, {
+            imgSrc: "./images/menuItems/4.png",
+            descr: "ShopeePay Gần Bạn"
+        }, {
+            imgSrc: "./images/menuItems/2.png",
+            descr: "Tech Zone - Siêu Thị Điện Tử, Siêu Sale Cuối Năm "
+        }, {
+            imgSrc: "./images/menuItems/4.png",
+            descr: "Hoàn Xu 20% - Đơn Từ 0Đ"
+        }, {
+            imgSrc: "./images/menuItems/4.png",
+            descr: "Nạp Thẻ, Hóa Đơn & Eco"
+        }, {
+            imgSrc: "./images/menuItems/2.png",
+            descr: "Hàng Hiệu - 50%"
+        }, {
+            imgSrc: "./images/menuItems/4.png",
+            descr: "Hàng Quốc Tế - Deal x9k"
+        }, {
+            imgSrc: "./images/menuItems/2.png",
+            descr: "Nghiện Săn Sale"
+        }, {
+            imgSrc: "./images/menuItems/4.png",
+            descr: "Giải Thưởng Shopee"
+        }, {
+            imgSrc: "./images/menuItems/4.png",
+            descr: 'Shopee Mall'
+        }, {
+            imgSrc: "./images/menuItems/2.png",
+            descr: "Săn Xu Mỗi Ngày"
+        }, {
+            imgSrc: "./images/menuItems/4.png",
+            descr: "KOL Club"
+        }];
+                         
+            
+ 
     return (
         <section className='main-catalog   flex bg-white mt-0 md:mt-auto flex-col items-center  relative xl:px-40 rounded-sm'>
             <Swiper
-                slidesPerView={5}
-                spaceBetween={10}
-                modules={[Grid]}
+                slidesPerView={4.5}
+                spaceBetween={15}
+                modules={[Grid, FreeMode]}
                 grid={{ rows: 2, fill: "row" }}
+                freeMode={{enabled: true, sticky: true}}
                 breakpoints={{
                     1024: {
                         grid: {
@@ -73,16 +109,17 @@ const MainCatalog = () => {
                         slidesPerView: 8,
                         spaceBetween: 10,
                         allowTouchMove: false
-                    },
+                    }
                 }}
                 className='main-catalog-swiper py-5 px-1  '>
                 {DUMMY_SLIDES.map((slide) => (
                     <SwiperSlide
+                     
                         key={uuid()}
                         tag={"a"}
-                        className='hover:scale-y-110 transition-all flex flex-col items-center justify-start cursor-pointer w-24 md:w-auto '>
+                        className='hover:scale-y-110  transition-all flex flex-col items-center justify-start cursor-pointer    '>
                         <img src={slide.imgSrc} className='w-10 h-10' alt='' />
-                        <p className='text-[12px] text-center font-normal line-clamp-2 py-2 md:text-sm'>
+                        <p className='text-[12px] text-center font-normal line-clamp-2   md:text-sm'>
                             {slide.descr}
                         </p>
                     </SwiperSlide>

@@ -99,7 +99,7 @@ const FlashSale = () => {
             imgSrc_2: "./images/flash_sale/50.png",
             price: 199000,
             totalSale: 2,
-        },
+        } 
     ];
     return (
         <section className='flash-sale flex flex-col   mb-1 bg-white xl:mx-40'>
@@ -111,11 +111,11 @@ const FlashSale = () => {
                 </a>
             </div>
 
-            <div className='flash-sale-items   group relative  '>
+            <div className='flash-sale-items flex   group relative  '>
                 <Swiper
                     modules={[Navigation]}
-                    slidesPerView={4}
-                    slidesPerGroup={4}
+                    slidesPerView={3.2}
+                    slidesPerGroup={3}
                     navigation={{
                         nextEl: ".flash-sale-next",
                         prevEl: ".flash-sale-prev",
@@ -123,18 +123,22 @@ const FlashSale = () => {
                     breakpoints={{
                         1024: {
                             slidesPerView: 6,
-                            slidesPerGroup: 6
-                        }
+                            slidesPerGroup: 6,
+                        },
                     }}
                     tag={"ul"}
-                    className=' flash-sale-swiper h-full  '>
+                    className=' flash-sale-swiper '>
                     {FlashSaleItems.map((item) => (
                         <SwiperSlide key={uuid()} tag={"li"} className='  px-4  '>
                             <a
                                 href={item.aSrc}
                                 className='h-full w-full flex flex-col justify-between'>
                                 <div className='bg-yellow-400  w-10 h-14 uppercase text-xs flex flex-col items-center px-2 absolute right-0 top-0 z-50'>
-                                    <span className='text-red-500'>{item.salePercent}</span> Giảm
+                                    <div className='flex flex-col'>
+                                        <span className='text-red-500'>{item.salePercent}</span>
+                                        Giảm
+                                    </div>
+                                    <div className='w-10 h-4 border-4 border-t-0 border-transparent border-t-white border-b-'></div>
                                 </div>
                                 <p className='absolute top-0  z-10 rounded-md text-gray-100 flex justify-between items-center bg-red-500 px-2'>
                                     {item.ofWhere}
@@ -147,9 +151,9 @@ const FlashSale = () => {
                                         className='absolute bottom-0 left-1/2 -translate-x-1/2'
                                     />
                                 </div>
-                                <div className='price flex flex-col items-center w-full'>
-                                    <p className='text-red-500'>d {item.price}</p>
-                                    <p className=' rounded-full relative w-full px-4 text-xs bg-red-200  text-white uppercase text-center flex-nowrap'>
+                                <div className='price flex flex-col items-center justify-center  w-full p-4'>
+                                    <p className='text-red-500  w-full'>d {item.price}</p>
+                                    <p className=' rounded-full   relative w-full px-4 text-xs bg-red-200  text-white uppercase text-center flex-nowrap'>
                                         Đã bán {item.totalSale}
                                         {item.totalSale > 0 ? (
                                             <span className='bg-red-600 absolute left-0 top-0 w-1/12 h-full rounded-full'></span>
@@ -161,10 +165,12 @@ const FlashSale = () => {
                             </a>
                         </SwiperSlide>
                     ))}
-                    <ViewMore />
+                    <SwiperSlide tag={"li"} className='  px-4  '>
+                        <ViewMore />
+                    </SwiperSlide>
                 </Swiper>
 
-                <CircleNext customClass={"flash-sale-next  "}  />
+                <CircleNext customClass={"flash-sale-next  "} />
 
                 <CirclePrev customClass={"flash-sale-prev "} />
             </div>

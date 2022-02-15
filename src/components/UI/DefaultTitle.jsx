@@ -1,10 +1,10 @@
 import React from 'react'
 
-const DefaultTitle = ({viewMore, viewAll, titleMobile, titleDesktop}) => {
+const DefaultTitle = ({sticky, viewMore, viewAll, titleMobile, titleDesktop}) => {
   return (
-      <div className={`flex justify-between items-center text-red-600 w-full`}>
+      <div className={`${sticky} flex justify-between items-center text-red-500 w-full bg-white px-2 py-4 rounded-sm`}>
           <p className='title md:hidden uppercase font-semibold'>{titleMobile}</p>
-          <p className='title hidden md:block uppercase text-gray-800'>{titleDesktop}</p>
+          <p className='title hidden md:block uppercase  '>{titleDesktop}</p>
           <button className='flex items-center gap-1'>
               <svg
                   xmlns='http://www.w3.org/2000/svg'

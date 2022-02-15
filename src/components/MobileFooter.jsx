@@ -3,24 +3,18 @@ import GotoUp from "./UI/GotoUp";
 
 const MobileFooter = () => {
     return (
-        <div className='end flex flex-col md:hidden items-center justify-between pt-0 p-2 md:px-40 '>
-            <div className=' grid grid-cols-2 gap-6 w-full py-8 items-center border-b border-b-gray-200'>
-                <a
-                    href='#'
-                    className=' uppercase whitespace-nowrap text-gray-500 text-xs px-4 border-r'>
+        <div className='end flex flex-col md:hidden items-center justify-between pt-0 p-2 md:px-40 text-[10px] '>
+            <div className=' grid grid-cols-2 divide-x gap-6 w-full py-8 items-center border-b  border-b-gray-200 text-[11px]'>
+                <a href='#' className=' uppercase whitespace-nowrap text-gray-500  px-4  '>
                     Chính Sách bảo mật
                 </a>
-                <a
-                    href='#'
-                    className='uppercase whitespace-nowrap text-gray-500 text-xs px-4 border-r'>
+                <a href='#' className='uppercase whitespace-nowrap text-gray-500  px-4  '>
                     Quy Chế hoạt động
                 </a>
-                <a
-                    href='#'
-                    className='uppercase whitespace-nowrap text-gray-500 text-xs px-4 border-r'>
+                <a href='#' className='uppercase whitespace-nowrap text-gray-500  px-4  '>
                     Chính sách vận chuyển
                 </a>
-                <a href='#' className='uppercase  text-center line-clamp-2 text-gray-500 text-xs px-4  '>
+                <a href='#' className='uppercase  text-center line-clamp-2 text-gray-500  px-4  '>
                     Chính sách trả hàng và hoàn tiền
                 </a>
             </div>
@@ -37,7 +31,7 @@ const MobileFooter = () => {
                 </div>
             </div>
 
-            <div className='sm:hidden text-xs text-center  text-gray-800 text-least space-y-1'>
+            <div className='sm:hidden  text-center  text-gray-800 text-least space-y-0.5'>
                 <p className='mb-2 '>Công ty TNHH Shopee</p>
                 <p>
                     Địa chỉ: Tầng 28, Tòa nhà trung tâm Lotte Hà Nội, 54 Liễu Giai, phường Cống Vị,
@@ -69,9 +63,7 @@ const MobileFooter = () => {
                 <p>&copy; 2015 - Bản quyền thuộc về Công ty TNHH Shopee</p>
             </div>
 
-            
-                <GotoUp />
-            
+            <GotoUp />
         </div>
     );
 };

@@ -65,7 +65,7 @@ const ShopeeMall = () => {
     ];
     return (
         <section className='shopee-mall flex relative flex-col pt-5 bg-white xl:mx-40  '>
-            <div className='shopee-mall-header flex items-center justify-between pb-2 border-b'>
+            <div className='shopee-mall-header flex items-center justify-between px-5 pb-2 border-b'>
                 <p className='uppercase text-red-500 font-semibold text-lg'>shopee mall</p>
                 <ul className='md:flex hidden flex-1 ml-4 items-center gap-6'>
                     <li className='flex items-center gap-1'>

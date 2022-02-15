@@ -1,5 +1,5 @@
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Grid, Navigation } from "swiper";
+import { FreeMode, Grid, Navigation } from "swiper";
 
 import "swiper/css";
 import "swiper/css/grid";
@@ -73,34 +73,43 @@ const Catalog = () => {
                 </a>
             </div>
 
-            <div className='group relative catalog-container'>
+            <div className='group relative catalog-container pb-5 md:pb-0'>
                 <Swiper
-                    modules={[Navigation, Grid]}
-                    slidesPerView={6}
-                    slidesPerGroup={6}
-                    spaceBetween={0}
+                    modules={[Navigation, Grid, FreeMode]}
+                    slidesPerView={3}
+                    slidesPerGroup={3}
+                    spaceBetween={10}
                     grid={{ rows: 2, fill: "row" }}
+                    freeMode={{ enabled: true, sticky: true }}
                     navigation={{
                         nextEl: ".catalog-next",
                         prevEl: ".catalog-prev",
                     }}
                     breakpoints={{
+                        768: {
+                            slidesPerView: 5,
+                            slidesPerGroup: 5,
+                            grid: { rows: 2, fill: "row" },
+                            spaceBetween: 0,
+                        },
                         1024: {
                             slidesPerView: 10,
                             slidesPerGroup: 10,
-                            grid: { rows: 2, fill: "row" }
-                        }
+                            grid: { rows: 2, fill: "row" },
+                            spaceBetween: 0,
+                            freeMode: { enabled: false, sticky: false },
+                        },
                     }}
                     className='catalog-swiper '>
                     {DUMMY_CATALOG.map((item) => (
                         <SwiperSlide
                             key={uuid()}
-                            className=' hover:shadow-lg  border border-gray-200/80 text-sm text-gray-400   h-auto'>
-                            <a href={item.aSrc} className='h-36 w-full  flex flex-col items-center '>
+                            className=' hover:shadow-lg  md:border border-gray-200/80 text-sm text-gray-400   h-auto'>
+                            <a href={item.aSrc} className='h-36   flex flex-col items-center '>
                                 <img
                                     src={item.imgSrc}
                                     alt={item.descr}
-                                    className='p-4 h-2/3  object-cover  '
+                                    className='md:p-4 h-2/3  object-cover  '
                                 />
                                 <p className=' px-2 line-clamp-2  text-center  text-gray-800 '>
                                     {item.descr}

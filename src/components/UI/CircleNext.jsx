@@ -3,7 +3,7 @@ import React from "react";
 const CircleNext = ({customClass}) => {
     return (
         <div
-            className={`${customClass} swiper-button-next  w-6  h-6 bg-white  rounded-full   hidden md:flex absolute  m-0   top-1/2 -translate-y-1/2   
+            className={`${customClass} swiper-button-next  w-6  h-6 bg-white  rounded-full   hidden lg:flex absolute  m-0   top-1/2 -translate-y-1/2   
             z-10  right-0  translate-x-1/2 group-hover:scale-[2]  shadow-md  justify-center  items-center   transition-all`}>
             <svg
                 xmlns='http://www.w3.org/2000/svg'

@@ -345,48 +345,48 @@ const DesktopFooter = () => {
                 </div>
                 <div className='flex flex-auto ml-auto '>
                     <span className='whitespace-nowrap'>Quốc giá & Khu vực:</span>
-                    <ul className='flex gap-2 flex-wrap  justify-center w-full  '>
-                        <li className='border-r whitespace-nowrap px-2 '>Singapore</li>
-                        <li className='border-r whitespace-nowrap px-2'>Indonesia</li>
-                        <li className='border-r whitespace-nowrap px-2'>Đài Loan</li>
-                        <li className='border-r whitespace-nowrap px-2'>Thái Lan</li>
-                        <li className='border-r whitespace-nowrap px-2'>Malaysia</li>
-                        <li className='border-r whitespace-nowrap px-2'>Việt Nam</li>
-                        <li className='border-r whitespace-nowrap px-2'>Phillippines</li>
-                        <li className='border-r whitespace-nowrap px-2'>Brazil</li>
-                        <li className='border-r whitespace-nowrap px-2'>Mexico</li>
-                        <li className='border-r whitespace-nowrap px-2'>Colombia</li>
-                        <li className='border-r whitespace-nowrap px-2'>Chile</li>
-                        <li className='border-r whitespace-nowrap px-2'>Poland</li>
-                        <li className='border-r whitespace-nowrap px-2'>Spain</li>
-                        <li className='border-r whitespace-nowrap px-2'>France</li>
-                        <li className='border-r whitespace-nowrap px-2'>India</li>
+                    <ul className='flex   divide-x flex-wrap  justify-center w-full  '>
+                        <li className='  whitespace-nowrap px-2 '>Singapore</li>
+                        <li className='  whitespace-nowrap px-2'>Indonesia</li>
+                        <li className='  whitespace-nowrap px-2'>Đài Loan</li>
+                        <li className='  whitespace-nowrap px-2'>Thái Lan</li>
+                        <li className='  whitespace-nowrap px-2'>Malaysia</li>
+                        <li className='  whitespace-nowrap px-2'>Việt Nam</li>
+                        <li className='  whitespace-nowrap px-2'>Phillippines</li>
+                        <li className='  whitespace-nowrap px-2'>Brazil</li>
+                        <li className='  whitespace-nowrap px-2'>Mexico</li>
+                        <li className='  whitespace-nowrap px-2'>Colombia</li>
+                        <li className='  whitespace-nowrap px-2'>Chile</li>
+                        <li className='  whitespace-nowrap px-2'>Poland</li>
+                        <li className='  whitespace-nowrap px-2'>Spain</li>
+                        <li className='  whitespace-nowrap px-2'>France</li>
+                        <li className='  whitespace-nowrap px-2'>India</li>
                     </ul>
                 </div>
             </div>
 
             <div className='end flex flex-col items-center justify-between pt-0 p-2 md:px-40 '>
-                <div className=' flex justify-center flex-nowrap w-full py-8 items-center'>
+                <div className=' flex justify-center divide-x flex-nowrap w-full py-8 items-center'>
                     <a
                         href='#'
-                        className=' uppercase whitespace-nowrap text-gray-500 text-xs px-4 border-r'>
+                        className=' uppercase whitespace-nowrap text-gray-500 text-xs px-4  '>
                         Chính Sách bảo mật
                     </a>
                     <a
                         href='#'
-                        className='uppercase whitespace-nowrap text-gray-500 text-xs px-4 border-r'>
+                        className='uppercase whitespace-nowrap text-gray-500 text-xs px-4  '>
                         Quy Chế hoạt động
                     </a>
                     <a
                         href='#'
-                        className='uppercase whitespace-nowrap text-gray-500 text-xs px-4 border-r'>
-                        {" "}
+                        className='uppercase whitespace-nowrap text-gray-500 text-xs px-4  '>
+                      
                         Chính sách vận chuyển{" "}
                     </a>
                     <a
                         href='#'
                         className='uppercase whitespace-nowrap text-gray-500 text-xs px-4  '>
-                        {" "}
+                       
                         Chính sách trả hàng và hoàn tiền
                     </a>
                 </div>

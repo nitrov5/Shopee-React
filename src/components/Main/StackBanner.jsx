@@ -1,6 +1,6 @@
 const StackBanner = () => {
   return (
-      <div className='shopee-stack-banner hidden relative lg:flex flex-col h-24 py-2 bg-white xl:mx-40'>
+      <div className='shopee-stack-banner   relative  flex-col h-24 py-2 bg-white xl:mx-40'>
           <img
               src='./images/stack_banner/1.png'
               useMap='#stack-banner'
