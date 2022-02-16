@@ -44,7 +44,7 @@ const MainBanner = () => {
                         </SwiperSlide>
                     ))}
                     
-                    <ButtonNext height={12} width={6} />
+                    <ButtonNext height={12} width={6}  />
                    <ButtonPrev />
                 </Swiper>
             </div>

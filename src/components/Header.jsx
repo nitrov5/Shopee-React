@@ -9,7 +9,7 @@ const Header = () => {
     return (
         <header id="header" className='md:bg-orange-600  border   md:h-36 lg:h-32 xl:px-40 md:sticky md:top-0 w-full z-20'>
             {/* Nav mobile  */}
-            <nav className='h-12 absolute flex md:hidden z-20 top-0 left-0 right-0 p-2 items-center   gap-2 '>
+            <nav className=' h-12 absolute flex md:hidden z-20 top-2 left-0 right-0 p-2 items-center   gap-2 '>
                 <div className='h-full search flex items-center justify-center w-2/3 bg-white rounded px-2 ml-6 '>
                     <svg
                         xmlns='http://www.w3.org/2000/svg'
