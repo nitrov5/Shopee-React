@@ -111,7 +111,7 @@ const MainCatalog = () => {
                         allowTouchMove: false
                     }
                 }}
-                className='main-catalog-swiper py-5 px-1  '>
+                className='main-catalog-swiper py-5 px-1  w-full '>
                 {DUMMY_SLIDES.map((slide) => (
                     <SwiperSlide
                      

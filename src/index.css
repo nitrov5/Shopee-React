@@ -20,7 +20,7 @@
     }
 
     .swiper-pagination-bullet {
-        @apply rounded-none !important w-10 h-10 bg-red-500;
+        @apply rounded-none !important w-12 h-12 bg-red-500;
     }
 
     p.had-sale {
@@ -151,38 +151,13 @@
     .feedback-thumbs-items .swiper-slide-thumb-active {
         @apply opacity-100 border-2 border-red-500;
     }
+
+
  
     
 } 
 
-.swiper {
-  width: 100%;
-  height: 100%;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.swiper-slide {
-  text-align: center;
-  font-size: 18px;
-  background: #fff;
-  height: calc((100% - 30px) / 2) !important;
-
-  /* Center slide text vertically */
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  -webkit-align-items: center;
-  align-items: center;
-}
-
+ 
  
 input::-webkit-calendar-picker-indicator {
     opacity: 100;
@@ -200,17 +175,6 @@ input[type=number] {
   -moz-appearance: textfield;
 }
 
-.swiper-pagination-bullet {
-    background: red;
-    width: 11px;
-    height: 11px;
-}
-
-.slogan-swiper  .swiper-pagination-bullet {
-    border-radius: 0;
-    background: red;
-    margin: 0 !important;
-}
 
  .swiper-button-next.swiper-button-disabled,
  .swiper-button-prev.swiper-button-disabled {
@@ -227,6 +191,17 @@ input[type=number] {
     content: "" !important;
 }
 
+
+.swiper-pagination-bullet.swiper-pagination-bullet-active {
+    background-color: orangered  !important;
+}
+
+.swiper-pagination-bullet {
+    background: rgb(255, 255, 255) !important;
+    width: 12px;
+    height: 12px;
+}
+ 
 .swiper-pagination-fraction {
     left: auto;
 }

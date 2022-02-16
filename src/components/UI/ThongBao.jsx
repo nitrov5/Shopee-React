@@ -2,7 +2,7 @@ import React from "react";
 
 const ThongBao = () => {
     return (
-        <div className='absolute z-50  bg-white -bottom-0 right-0  translate-y-full opacity-0  transition-all group-hover:opacity-100 w-0 group-hover:w-96 h-0 group-hover:h-80 rounded-sm'>
+        <div className='absolute z-50  bg-white -bottom-0 right-0  translate-y-full opacity-0  transition-all group-hover:opacity-100 w-0 group-hover:w-96 h-0 group-hover:h-80 rounded-sm overflow-hidden'>
             <div className='no-signin flex flex-col w-full h-full justify-between relative'>
                 <div className='absolute right-8 top-0 -translate-y-full   w-0 h-0 border-8  border-t-0 border-transparent border-b-white'></div>
                 <div className='flex flex-col items-center flex-auto justify-center'>

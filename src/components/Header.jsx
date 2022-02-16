@@ -160,8 +160,8 @@ const Header = () => {
                 </div>
             </nav>
 
-            <div className='second hidden md:flex justify-between items-center text-white'>
-            <div className='logo h-full flex items-center gap-2'>
+            <div className='second hidden md:flex justify-between gap-10 items-center text-white'>
+                <div className='logo h-full flex items-center gap-2'>
                     <svg
                         xmlns='http://www.w3.org/2000/svg'
                         className='w-16 h-16'
@@ -179,12 +179,12 @@ const Header = () => {
                         <h1 className='text-3xl'>Shopee</h1>
                     </a>
                 </div>
-                <div className='search overflow-hidden flex flex-col   pt-4   mx-10 text-gray-800   rounded-sm'>
+                <div className='search overflow-x-hidden flex flex-col grow shrink   pt-4  text-gray-800   rounded-sm'>
                     <div className='flex justify-between h-10 bg-white  '>
                         <input
                             type='text'
                             placeholder='Book Club Săn Quà Chính Hãng'
-                            className='flex-auto p-2 px-4   bg-white border-none focus:outline-0 rounded'
+                            className='  p-2 px-4   bg-white border-none focus:outline-0 rounded'
                         />
                         <button
                             aria-label='search'

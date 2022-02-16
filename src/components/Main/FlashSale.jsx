@@ -13,7 +13,7 @@ const FlashSale = () => {
         {
             aSrc: "#",
             salePercent: "64%",
-            ofWhere: "Mall",
+            ofWhere: "Yêu thích",
             imgSrc_1: "./images/flash_sale/1.jpeg",
             imgSrc_2: "./images/flash_sale/50.png",
             price: 199000,
@@ -22,7 +22,7 @@ const FlashSale = () => {
         {
             aSrc: "#",
             salePercent: "64%",
-            ofWhere: "Mall",
+            ofWhere: "Yêu thích",
             imgSrc_1: "./images/flash_sale/1.jpeg",
             imgSrc_2: "./images/flash_sale/50.png",
             price: 199000,
@@ -31,7 +31,7 @@ const FlashSale = () => {
         {
             aSrc: "#",
             salePercent: "64%",
-            ofWhere: "Mall",
+            ofWhere: "Yêu thích",
             imgSrc_1: "./images/flash_sale/53_2.jpeg",
             imgSrc_2: "./images/flash_sale/52.png",
             price: 199000,
@@ -49,7 +49,7 @@ const FlashSale = () => {
         {
             aSrc: "#",
             salePercent: "64%",
-            ofWhere: "Mall",
+            ofWhere: "Yêu thích",
             imgSrc_1: "./images/flash_sale/1.jpeg",
             imgSrc_2: "./images/flash_sale/50.png",
             price: 199000,
@@ -58,7 +58,7 @@ const FlashSale = () => {
         {
             aSrc: "#",
             salePercent: "64%",
-            ofWhere: "Mall",
+            ofWhere: "Yêu thích",
             imgSrc_1: "./images/flash_sale/1.jpeg",
             imgSrc_2: "./images/flash_sale/50.png",
             price: 199000,
@@ -67,7 +67,7 @@ const FlashSale = () => {
         {
             aSrc: "#",
             salePercent: "64%",
-            ofWhere: "Mall",
+            ofWhere: "Yêu thích",
             imgSrc_1: "./images/flash_sale/1.jpeg",
             imgSrc_2: "./images/flash_sale/50.png",
             price: 199000,
@@ -76,7 +76,7 @@ const FlashSale = () => {
         {
             aSrc: "#",
             salePercent: "64%",
-            ofWhere: "Mall",
+            ofWhere: "Yêu thích",
             imgSrc_1: "./images/flash_sale/53_2.jpeg",
             imgSrc_2: "./images/flash_sale/52.png",
             price: 199000,
@@ -94,7 +94,7 @@ const FlashSale = () => {
         {
             aSrc: "#",
             salePercent: "64%",
-            ofWhere: "Mall",
+            ofWhere: "Yêu thích",
             imgSrc_1: "./images/flash_sale/1.jpeg",
             imgSrc_2: "./images/flash_sale/50.png",
             price: 199000,
@@ -132,17 +132,16 @@ const FlashSale = () => {
                         <SwiperSlide key={uuid()} tag={"li"} className='  px-4  '>
                             <a
                                 href={item.aSrc}
-                                className='h-full w-full flex flex-col justify-between'>
-                                <div className='bg-yellow-400  w-10 h-14 uppercase text-xs flex flex-col items-center px-2 absolute right-0 top-0 z-50'>
-                                    <div className='flex flex-col'>
-                                        <span className='text-red-500'>{item.salePercent}</span>
-                                        Giảm
+                                className='h-full w-full flex flex-col justify-between border relative'>
+                                <div className='bg-yellow-400/80  w-12 h-10 uppercase text-xs flex flex-col items-center  absolute right-0 top-0 z-50'>
+                                    <div className='flex flex-col items-center  h-full px-2 py-0.5 after:border-[20px] after:border-b-[6px] after:border-t-0 after:border-yellow-400/80 after:border-b-white after:w-full after:absolute after:bottom-0.5 after:translate-y-full'>
+                                        <span className='text-red-500 font-semibold'>
+                                            {item.salePercent}
+                                        </span>
+                                        <span className='text-white font-semibold'> Giảm</span>
                                     </div>
-                                    <div className='w-10 h-4 border-4 border-t-0 border-transparent border-t-white border-b-'></div>
                                 </div>
-                                <p className='absolute top-0  z-10 rounded-md text-gray-100 flex justify-between items-center bg-red-500 px-2'>
-                                    {item.ofWhere}
-                                </p>
+                             
                                 <div className='card-image relative h-2/3 w-full'>
                                     <img src={item.imgSrc_1} className='object-cover' />
                                     <img

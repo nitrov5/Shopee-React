@@ -10,6 +10,8 @@ import "swiper/css/grid";
 import ChevronRight from "../UI/ChevronRight";
 import CircleNext from "../UI/CircleNext";
 import CirclePrev from "../UI/CirclePrev";
+import ButtonNext from "../UI/ButtonNext";
+import ButtonPrev from "../UI/ButtonPrev";
 
 const ShopeeMall = () => {
     const mobileSlides = [
@@ -143,9 +145,9 @@ const ShopeeMall = () => {
                 </li>
             </ul>
 
-            <div className='shopee-mall-container relative flex flex-col md:flex-row space-y-2 items-center md:h-96 '>
+            <div className='shopee-mall-container relative flex flex-col md:flex-row space-y-2 items-center '>
                 {/* Mobile */}
-                <div className='shopee-mall-swiper-mobile relative h-full overflow-hidden w-full md:hidden'>
+                <div className='shopee-mall-swiper-mobile relative  overflow-hidden  md:hidden'>
                     <Swiper
                         modules={[Pagination, Autoplay]}
                         autoplay={{ delay: 2000 }}
@@ -161,18 +163,21 @@ const ShopeeMall = () => {
                 </div>
 
                 {/* Desktop */}
-                <div className='shopee-mall-swiper-laptop relative  hidden md:flex overflow-hidden md:w-1/3 md:h-full   p-[10px] pr-0'>
+                <div className='shopee-mall-swiper-laptop   relative  hidden md:flex overflow-hidden md:w-1/3  md:h-[32rem]  p-[10px] pr-0'>
                     <Swiper
-                        modules={[Pagination, Autoplay]}
-                        autoplay={{ delay: 2000 }}
+                        modules={[Pagination, Autoplay, Navigation]}
+                        autoplay={{ delay: 4000 }}
                         slidesPerView={1}
+                        navigation={{ nextEl: "#shopee-mall-next", prevEl: "#shopee-mall-prev" }}
                         pagination={{ clickable: true }}
-                        className='w-full h-full shopee-mall-swiper'>
+                        className='relative shopee-mall-swiper border w-full h-full group '>
                         {desktopSlides.map((item) => (
-                            <SwiperSlide key={uuid()}>
-                                <img src={item.imgSrc} />
+                            <SwiperSlide key={uuid()} className='w-full'>
+                                <img src={item.imgSrc} className='object-cover w-full flex ' />
                             </SwiperSlide>
                         ))}
+                        <ButtonNext buttonClasses={"shopee-mall-next"} />
+                        <ButtonPrev buttonClasses={"shopee-mall-prev"} />
                     </Swiper>
                 </div>
 
@@ -187,14 +192,16 @@ const ShopeeMall = () => {
                             768: {
                                 allowTouchMove: true,
                                 grid: {
-                                    rows: 2, fill: 'row'
-                                }
+                                    rows: 2,
+                                    fill: "row",
+                                },
                             },
                             1200: {
                                 allowTouchMove: false,
                                 grid: {
-                                    rows: 2, fill: 'row'
-                                }
+                                    rows: 2,
+                                    fill: "row",
+                                },
                             },
                         }}
                         navigation={{
