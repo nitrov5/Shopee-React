@@ -113,31 +113,40 @@ const TopSearch = () => {
                           nextEl: ".topSearch-next",
                           prevEl: ".topSearch-prev",
                       }}
-                      className='  w-full flex  items-center'>
+                      breakpoints={{
+                          768: {
+                              slidesPerView: 5.2,
+                              slidesPerGroup: 5
+                          },
+                          1024: {
+                              slidesPerView: 6,
+                              slidesPerGroup: 6
+                          }
+                      }}
+                      className='h-48 w-full flex  items-center'>
                       {TopSearchList.map((item) => (
-                          <SwiperSlide key={uuid()} className=' border md:border-0  '>
+                          <SwiperSlide key={uuid()} className=' border md:border-0 h-full  '>
                               <a
                                   href={item.href}
-                                  className='h-full relative flex flex-col justify-center'>
+                                  className='h-full w-full relative flex flex-col  justify-center '>
                                   <img src={item.imgSrc} className='w-full object-cover h-2/3' />
-                                  <div className='description h-1/3 relative py-2 '>
-                                      <p className='line-clamp-2 text-sm '>{item.description}</p>
+                                  <div className='px-2 py-1 md:py-2 description flex flex-col justify-between h-1/3 bg-gray-50 lg:bg-white relative   '>
+                                      <p className=' line-clamp-2 text-sm  '>{item.description}</p>
                                       <p
-                                          className='
+                                          className='                                            
                                             text-gray-500
-                                            md:bg-gray-800/20 md:text-white md:absolute   md:top-0 md:-translate-y-full md:text-center
+                                            md:bg-slate-700/30 md:text-white md:absolute   md:top-0 md:left-0 md:-translate-y-full
+                                             md:text-center
                                             text-xs
                                             md:text-sm
-                                            w-full
-                                            h-6
-                                            md:flex md:flex-col md:justify-center
+                                            w-full                                         
                                         '>
                                           {item.totalSold}
                                       </p>
                                   </div>
                                   <img
                                       src={item.logoSrc}
-                                      className='absolute top-0 left-0 w-6 h-8'
+                                      className='absolute top-0 left-0 w-6 h-8 md:w-8 md:h-10'
                                       alt=''
                                   />
                               </a>
@@ -146,7 +155,7 @@ const TopSearch = () => {
                       <a href='#' className='flex justify-center flex-col md:hidden swiper-slide '>
                           <svg
                               xmlns='http://www.w3.org/2000/svg'
-                              className='h-10 w-10 text-red-500'
+                              className='h-10 w-10   text-red-500'
                               fill='none'
                               viewBox='0 0 24 24'
                               stroke='currentColor'>

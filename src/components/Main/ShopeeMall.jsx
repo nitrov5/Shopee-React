@@ -66,35 +66,46 @@ const ShopeeMall = () => {
         { aSrc: "#", imgSrc: "./images/shopee_mall/product1.png", description: "mua 1 tặng 1" },
     ];
     return (
-        <section className='shopee-mall flex relative flex-col pt-5 bg-white xl:mx-40  '>
-            <div className='shopee-mall-header flex items-center justify-between px-5 pb-2 border-b'>
-                <p className='uppercase text-red-500 font-semibold text-lg'>shopee mall</p>
+        <section className='shopee-mall flex relative flex-col  bg-white xl:mx-40  '>
+            <div className='shopee-mall-header flex items-center justify-between lg:px-5 py-1 md:py-4 px-2  lg:pb-2 border-b'>
+                <p className='uppercase text-red-600  text-lg'>shopee mall</p>
+                {/* Desktop */}
                 <ul className='md:flex hidden flex-1 ml-4 items-center gap-6'>
                     <li className='flex items-center gap-1'>
                         <img src='./images/shopee_mall/header/1.png' alt='' className='w-4 h-4' />
-                        <span className='text-black'>7 Ngày Miễn Phí Trả Hàng</span>
+                        <span className='text-gray-800  whitespace-nowrap'>
+                            7 Ngày Miễn Phí Trả Hàng
+                        </span>
                     </li>
                     <li className='flex items-center gap-1'>
                         <img src='./images/shopee_mall/header/2.png' alt='' className='w-4 h-4' />
-                        <span className='text-black'>Hàng Chính Hãng 100% </span>
+                        <span className='text-gray-800  whitespace-nowrap'>
+                            Hàng Chính Hãng 100%{" "}
+                        </span>
                     </li>
                     <li className='flex items-center gap-1'>
                         <img src='./images/shopee_mall/header/3.png' alt='' className='w-4 h-4' />
-                        <span className='text-black'>Miễn Phí Vận Chuyển</span>
+                        <span className='text-gray-800  whitespace-nowrap'>
+                            Miễn Phí Vận Chuyển
+                        </span>
                     </li>
                 </ul>
-                <a href='#' className='md:hidden flex items-center font-thin text-gray-600 text-xs'>
-                    Xem thêm <ChevronRight />
-                </a>
+
                 <a
                     href='#'
                     className='text-red-500 hidden md:flex items-center justify-center text-sm font-semibold gap-2'>
                     Xem Tất Cả
                     <ChevronRight />
                 </a>
+
+                {/* Mobile */}
+                <a href='#' className='md:hidden flex items-center font-thin text-gray-600 text-xs'>
+                    Xem thêm <ChevronRight />
+                </a>
             </div>
 
-            <ul className='shopee-mall-title md:hidden flex items-center justify-between gap-2'>
+            {/* Mobile */}
+            <ul className='shopee-mall-title md:hidden flex items-center justify-between gap-1 py-2 text-gray-800 px-2'>
                 <li className='flex items-center'>
                     <svg
                         xmlns='http://www.w3.org/2000/svg'
@@ -109,7 +120,7 @@ const ShopeeMall = () => {
                             d='M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z'
                         />
                     </svg>
-                    <span className='text-least md:text-base flex-nowrap'>Miễn phí trả hàng</span>
+                    <span className='text-xs  whitespace-nowrap'>Miễn phí trả hàng</span>
                 </li>
                 <li className='flex items-center'>
                     <svg
@@ -125,7 +136,7 @@ const ShopeeMall = () => {
                             d='M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z'
                         />
                     </svg>
-                    <span className='text-least md:text-base flex-nowrap'>Chính hãng 100%</span>
+                    <span className='text-xs whitespace-nowrap'>Chính hãng 100%</span>
                 </li>
                 <li className='flex items-center'>
                     <svg
@@ -141,13 +152,13 @@ const ShopeeMall = () => {
                             d='M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z'
                         />
                     </svg>
-                    <span className='text-least md:text-base flex-nowrap'>Giao miễn phí</span>
+                    <span className='text-xs whitespace-nowrap'>Giao miễn phí</span>
                 </li>
             </ul>
 
-            <div className='shopee-mall-container relative flex flex-col  lg:flex-row space-y-2 items-center '>
+            <div className='shopee-mall-container relative flex flex-col  lg:flex-row    '>
                 {/* Mobile */}
-                <div className='shopee-mall-swiper-mobile relative  overflow-hidden w-full  lg:hidden'>
+                <div className='shopee-mall-swiper-mobile relative  overflow-hidden w-full px-2.5  lg:hidden border border-blue-300'>
                     <Swiper
                         modules={[Pagination, Autoplay]}
                         autoplay={{ delay: 2000 }}
@@ -163,14 +174,16 @@ const ShopeeMall = () => {
                 </div>
 
                 {/* Desktop */}
-                <div className='shopee-mall-swiper-laptop   w-full  hidden lg:flex overflow-hidden lg:w-1/3  p-[10px] pr-0'>
+                <div
+                    className='shopee-mall-swiper-laptop   w-full  h-full hidden lg:flex overflow-hidden lg:w-1/3  p-[10px] pr-0 pb-0 
+                '>
                     <Swiper
                         modules={[Pagination, Autoplay, Navigation]}
                         autoplay={{ delay: 4000 }}
                         slidesPerView={1}
                         navigation={{ nextEl: "#shopee-mall-next", prevEl: "#shopee-mall-prev" }}
                         pagination={{ clickable: true }}
-                        className='relative shopee-mall-swiper border  group  lg:max-h-[32rem]'>
+                        className='relative shopee-mall-swiper border h-[32rem] group  '>
                         {desktopSlides.map((item) => (
                             <SwiperSlide key={uuid()} className='w-full'>
                                 <img src={item.imgSrc} className='object-cover w-full flex ' />
@@ -181,13 +194,14 @@ const ShopeeMall = () => {
                     </Swiper>
                 </div>
 
-                <div className='shopee-mall-product-container group  w-full  lg:w-2/3 h-full relative'>
+                <div className='shopee-mall-product-container group  w-full h-[32rem] lg:w-2/3 relative px-2.5 md:px-0'>
                     <Swiper
                         modules={[Navigation, Grid]}
-                        slidesPerView={4}
-                        slidesPerGroup={4}
+                        slidesPerView={2.3}
+                        slidesPerGroup={2}
+                        
                         allowTouchMove={true}
-                        grid={{ rows: 2, fill: "row" }}
+                        grid={{ rows: 1, fill: "row" }}
                         breakpoints={{
                             768: {
                                 allowTouchMove: true,
@@ -195,28 +209,39 @@ const ShopeeMall = () => {
                                     rows: 2,
                                     fill: "row",
                                 },
+                                slidesPerView: 4,
+                                slidesPerGroup: 4,
                             },
-                            1200: {
+                            1024: {
                                 allowTouchMove: false,
                                 grid: {
                                     rows: 2,
                                     fill: "row",
                                 },
+                                slidesPerView: 4,
+                                slidesPerGroup: 4,
                             },
                         }}
                         navigation={{
                             nextEl: ".shopee-mall-product-next",
                             prevEl: ".shopee-mall-product-prev",
                         }}
-                        className='shopee-mall-products-swiper'>
+                        className='shopee-mall-products-swiper  h-full'>
                         {productSlides.map((product) => (
-                            <SwiperSlide key={uuid()} className='  p-[10px]'>
+                            <SwiperSlide key={uuid()} className=' bg-sky-400 h-1/2'>
                                 <a
                                     href={product.aSrc}
-                                    className='flex flex-col items-center  justify-between  border   md:border-0  rounded cursor-pointer  h-4/5  w-28   '>
-                                    <img src={product.imgSrc} alt='' />
+                                    className='flex flex-col items-center  justify-between     rounded cursor-pointer  h-2/3   border border-red-500'>
+                                    <img
+                                        src={product.imgSrc}
+                                        alt=''
+                                        className='w-full h-full border border-red-400'
+                                    />
                                 </a>
-                                <p className='text-red-600  font-bold capitalize  text-xs  whitespace-nowrap  md:text-base md:font-normal  flex flex-col justify-center  w-full  text-center  h-1/5'>
+                                <p
+                                    className='text-red-600  font-bold capitalize  truncate text-xs  whitespace-nowrap 
+                                 md:text-base md:font-normal  
+                                flex flex-col justify-center  w-full  text-center    border h-1/3'>
                                     {product.description}
                                 </p>
                             </SwiperSlide>

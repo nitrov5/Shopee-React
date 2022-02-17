@@ -7,6 +7,7 @@ import CirclePrev from "../UI/CirclePrev";
 import ViewMore from "../UI/ViewMore";
 import ChevronRight from "../UI/ChevronRight";
 import { v4 as uuid } from "uuid";
+import SaleOff from "../UI/SaleOff";
 
 const FlashSale = () => {
     const FlashSaleItems = [
@@ -122,6 +123,10 @@ const FlashSale = () => {
                         prevEl: ".flash-sale-prev",
                     }}
                     breakpoints={{
+                        768: {
+                            slidesPerView: 4.2,
+                            slidesPerGroup: 4
+                        },
                         1024: {
                             slidesPerView: 6,
                             slidesPerGroup: 6,
@@ -134,14 +139,7 @@ const FlashSale = () => {
                             <a
                                 href={item.aSrc}
                                 className='h-full w-full flex flex-col justify-between lg:border relative '>
-                                <div className='bg-yellow-400/80  w-12 h-10 uppercase text-xs flex flex-col items-center  absolute right-0 top-0 z-50'>
-                                    <div className='flex flex-col items-center  h-full px-2 py-0.5 after:border-[20px] after:border-b-[6px] after:border-t-0 after:border-yellow-400/80 after:border-b-white after:w-full after:absolute after:bottom-0.5 after:translate-y-full'>
-                                        <span className='text-red-500 font-semibold'>
-                                            {item.salePercent}
-                                        </span>
-                                        <span className='text-white font-semibold'> Giảm</span>
-                                    </div>
-                                </div>
+                               <SaleOff salePercent={item.salePercent}/>
 
                                 <div className='card-image relative h-2/3 w-full'>
                                     <img src={item.imgSrc_1} className='object-cover' />
