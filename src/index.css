@@ -194,10 +194,13 @@ input[type=number] {
 
 .swiper-pagination-bullet.swiper-pagination-bullet-active {
     background-color: orangered  !important;
+    opacity: 1;
 }
 
-.swiper-pagination-bullet {
-    background: rgb(255, 255, 255) !important;
+span.swiper-pagination-bullet {
+    background: rgb(245, 245, 243) !important;
+    opacity: 0.3;
+    border: 1px solid gray;
     width: 12px;
     height: 12px;
 }

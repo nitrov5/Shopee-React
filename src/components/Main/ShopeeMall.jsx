@@ -157,8 +157,8 @@ const ShopeeMall = () => {
             </ul>
 
             <div className='shopee-mall-container relative flex flex-col  lg:flex-row    '>
-                {/* Mobile */}
-                <div className='shopee-mall-swiper-mobile relative  overflow-hidden w-full px-2.5  lg:hidden border border-blue-300'>
+                {/* Mobile slides banner */}
+                <div className='shopee-mall-swiper-mobile relative  overflow-hidden w-full px-2.5  lg:hidden  '>
                     <Swiper
                         modules={[Pagination, Autoplay]}
                         autoplay={{ delay: 2000 }}
@@ -173,9 +173,9 @@ const ShopeeMall = () => {
                     </Swiper>
                 </div>
 
-                {/* Desktop */}
+                {/* Desktop slides banner */}
                 <div
-                    className='shopee-mall-swiper-laptop   w-full  h-full hidden lg:flex overflow-hidden lg:w-1/3  p-[10px] pr-0 pb-0 
+                    className='shopee-mall-swiper-laptop   w-full  h-full hidden lg:flex overflow-hidden lg:w-1/3 lg:h-[29.75rem]  pt-[10px] pl-[10px]  
                 '>
                     <Swiper
                         modules={[Pagination, Autoplay, Navigation]}
@@ -183,10 +183,10 @@ const ShopeeMall = () => {
                         slidesPerView={1}
                         navigation={{ nextEl: "#shopee-mall-next", prevEl: "#shopee-mall-prev" }}
                         pagination={{ clickable: true }}
-                        className='relative shopee-mall-swiper border h-[32rem] group  '>
+                        className='relative shopee-mall-swiper border  group  w-full h-full'>
                         {desktopSlides.map((item) => (
-                            <SwiperSlide key={uuid()} className='w-full'>
-                                <img src={item.imgSrc} className='object-cover w-full flex ' />
+                            <SwiperSlide key={uuid()} className='w-full h-full'>
+                                <img src={item.imgSrc} className='object-cover w-full h-full ' />
                             </SwiperSlide>
                         ))}
                         <ButtonNext buttonClasses={"shopee-mall-next"} />
@@ -194,12 +194,12 @@ const ShopeeMall = () => {
                     </Swiper>
                 </div>
 
-                <div className='shopee-mall-product-container group  w-full h-[32rem] lg:w-2/3 relative px-2.5 md:px-0'>
+                <div className='shopee-mall-product-container group  w-full lg:w-2/3 lg:h-[29.75rem] relative p-2.5 md:p-0   '>
                     <Swiper
                         modules={[Navigation, Grid]}
                         slidesPerView={2.3}
                         slidesPerGroup={2}
-                        
+                        spaceBetween={8}
                         allowTouchMove={true}
                         grid={{ rows: 1, fill: "row" }}
                         breakpoints={{
@@ -211,6 +211,7 @@ const ShopeeMall = () => {
                                 },
                                 slidesPerView: 4,
                                 slidesPerGroup: 4,
+                                spaceBetween: 0,
                             },
                             1024: {
                                 allowTouchMove: false,
@@ -220,28 +221,27 @@ const ShopeeMall = () => {
                                 },
                                 slidesPerView: 4,
                                 slidesPerGroup: 4,
+                                spaceBetween: 0,
                             },
                         }}
                         navigation={{
                             nextEl: ".shopee-mall-product-next",
                             prevEl: ".shopee-mall-product-prev",
                         }}
-                        className='shopee-mall-products-swiper  h-full'>
+                        className='shopee-mall-products-swiper  h-full w-full'>
                         {productSlides.map((product) => (
-                            <SwiperSlide key={uuid()} className=' bg-sky-400 h-1/2'>
+                            <SwiperSlide
+                                key={uuid()}
+                                className='h-1/2 md:p-2.5  relative  border md:border-0 '>
                                 <a
                                     href={product.aSrc}
-                                    className='flex flex-col items-center  justify-between     rounded cursor-pointer  h-2/3   border border-red-500'>
-                                    <img
-                                        src={product.imgSrc}
-                                        alt=''
-                                        className='w-full h-full border border-red-400'
-                                    />
+                                    className='flex flex-col items-center    w-full  h-full   '>
+                                    <img src={product.imgSrc} alt='' className='w-full  h-full object-cover ' />
                                 </a>
                                 <p
-                                    className='text-red-600  font-bold capitalize  truncate text-xs  whitespace-nowrap 
+                                    className='text-red-600  absolute -bottom-0.5 left-0 h-1/5 font-bold capitalize   truncate text-xs  whitespace-nowrap 
                                  md:text-base md:font-normal  
-                                flex flex-col justify-center  w-full  text-center    border h-1/3'>
+                                flex flex-col justify-center  w-full  text-center  '>
                                     {product.description}
                                 </p>
                             </SwiperSlide>

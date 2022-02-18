@@ -129,8 +129,8 @@ const TopSearch = () => {
                               <a
                                   href={item.href}
                                   className='h-full w-full relative flex flex-col  justify-center '>
-                                  <img src={item.imgSrc} className='w-full object-cover h-2/3' />
-                                  <div className='px-2 py-1 md:py-2 description flex flex-col justify-between h-1/3 bg-gray-50 lg:bg-white relative   '>
+                                  <img src={item.imgSrc} className='w-full object-cover h-3/5' />
+                                  <div className='px-2 py-1 md:py-2 description flex flex-col justify-between h-2/5 bg-gray-50 lg:bg-white relative   '>
                                       <p className=' line-clamp-2 text-sm  '>{item.description}</p>
                                       <p
                                           className='                                            

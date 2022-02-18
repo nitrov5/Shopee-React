@@ -1,4 +1,5 @@
 import Catalog from "./Catalog";
+import FavoriteCollection from "./FavoriteCollection";
 import FlashSale from "./FlashSale";
 import FluentlySearch from "./FluentlySearch";
 import MainBanner from "./MainBanner";
@@ -26,7 +27,7 @@ const Main = () => {
                 <ShopeeMall />
                 <ShopeeLive />
                 <FluentlySearch />
-                <SecondLogo />
+                <FavoriteCollection />
                 <Catalog />
                 <TodayRecommend />
             </main>
