@@ -104,7 +104,7 @@ const FlashSale = () => {
     ];
     return (
         <section className='flash-sale flex flex-col   mb-1 bg-white xl:mx-40'>
-            <div className='flash-sale-header flex justify-between items-center px-4 py-3 h-16 lg:h-24'>
+            <div className='flash-sale-header flex justify-between items-center px-3.5 h-14  '>
                 <img src='./images/flash_sale/logo.png' alt='' className='h-2/3' />
                 <a href='#' className='flex items-center font-thin text-gray-500 text-xs'>
                     Xem Tất Cả
@@ -117,7 +117,7 @@ const FlashSale = () => {
                     modules={[Navigation]}
                     slidesPerView={2.2}
                     slidesPerGroup={3}
-                    spaceBetween={0}
+                   
                     navigation={{
                         nextEl: ".flash-sale-next",
                         prevEl: ".flash-sale-prev",

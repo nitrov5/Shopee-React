@@ -53,7 +53,7 @@ const FavoriteCollection = () => {
     ];
 
     return (
-        <div className='favorites-gallery  lg:hidden flex flex-col bg-white xl:mx-40'>
+        <div className='favorites-gallery  lg:hidden flex flex-col bg-white xl:mx-40 mb-1'>
             <DefaultTitle titleMobile={"Bộ Sưu Tập Yêu Thích"} customCss='px-2.5 py-2 ' /> 
            
 

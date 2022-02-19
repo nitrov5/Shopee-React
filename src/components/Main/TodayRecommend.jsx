@@ -160,23 +160,23 @@ const TodayRecommend = () => {
             <DefaultTitle
                 titleMobile={"Gợi Ý Hôm Nay"}
                 titleDesktop={"Gợi Ý Hôm Nay"}
-                sticky='lg:sticky  lg:top-32  md:z-[15] transition-all'
+                sticky='sticky  top-0 lg:top-32  md:z-[15] transition-all  h-14'
             />
 
-            <div className='suggest-products flex flex-wrap gap-x-1.5 gap-y-4 md:gap-4  justify-center'>
+            <div className='suggest-products grid grid-cols-2 px-2 justify-items-center gap-2 md:grid-cols-4 md:gap-2.5 lg:grid-cols-6 '>
                 {ProductList.map((product) => (
                     <a
                         key={uuid()}
                         href='#'
-                        className='w-36 md:w-44 shadow-md hover:border hover:-translate-y-1 hover:z-10 hover:border-orange-600 group relative flex flex-col border border-white'>
+                        className='  shadow-md hover:border hover:-translate-y-1 hover:z-10 hover:border-orange-600 group relative flex flex-col rounded-sm bg-white'>
                         <div className='suggest-product-header relative h-2/3'>
                             <img src={product.imgSrc} alt='' className=' w-full object-cover' />
 
-                            {product.tagProduct ? <span className='absolute top-2 px-2 -left-1 z-10 rounded-l-none rounded-sm text-gray-100  bg-orange-500 text-center'>
+                            {product.tagProduct && <span className='absolute top-2 px-2 -left-1 z-10 rounded-l-none rounded-sm text-gray-100  bg-orange-500 text-center'>
                                 <span className='  w-full after:absolute after:bottom-0 after:left-0  after:border-[4px]  after:-translate-x-1/2 after:translate-y-full after:border-t-0 after:border-transparent after:border-r-orange-600'>
                                     {product.tagProduct}
                                 </span>
-                            </span> : ''
+                            </span>  
                             }
                             <img
                                 src={product.imgTagSrc}
@@ -197,7 +197,7 @@ const TodayRecommend = () => {
                         </div>
 
                         <div className='find-similar-product text-white bg-orange-600 text-center absolute bottom-0 w-full rounded-sm z-30 translate-y-full group-hover:block hidden p-1 py-1.5   transition-all'>
-                            {" "}
+                            
                             Tìm sản phẩm tương tự
                         </div>
                     </a>

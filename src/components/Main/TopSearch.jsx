@@ -96,18 +96,18 @@ const TopSearch = () => {
   return (
       <>
           {/* Mobile */}
-          <section className='top-search relative flex lg:hidden flex-col space-y-2 p-2 mb-1 bg-white xl:mx-40'>
+          <section className='top-search relative flex lg:hidden flex-col space-y-2   mb-1 bg-white xl:mx-40'>
               <DefaultTitle
                   titleMobile={"Tìm kiếm hàng đầu"}
                   titleDesktop={"Tìm kiếm hàng đầu"}
                   viewMore={"#"}
               />
 
-              <div className='top-search-container group   overflow-x-hidden  '>
+              <div className='top-search-container group   overflow-x-hidden'>
                   <Swiper
                       slidesPerView={2.3}
                       slidesPerGroup={2}
-                      spaceBetween={10}
+                      spaceBetween={8}
                       modules={[Navigation]}
                       navigation={{
                           nextEl: ".topSearch-next",
@@ -116,14 +116,14 @@ const TopSearch = () => {
                       breakpoints={{
                           768: {
                               slidesPerView: 5.2,
-                              slidesPerGroup: 5
+                              slidesPerGroup: 5,
                           },
                           1024: {
                               slidesPerView: 6,
-                              slidesPerGroup: 6
-                          }
+                              slidesPerGroup: 6,
+                          },
                       }}
-                      className='h-48 w-full flex  items-center'>
+                      className='h-48 w-full flex  items-center  px-2.5  '>
                       {TopSearchList.map((item) => (
                           <SwiperSlide key={uuid()} className=' border md:border-0 h-full  '>
                               <a

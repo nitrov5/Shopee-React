@@ -52,10 +52,10 @@ const Catalog = () => {
     ];
 
     return (
-        <div className='bg-white category flex  flex-col   xl:mx-40   shadow   rounded-sm '>
-            <div className='  p-5 flex items-center justify-between     '>
-                <p className='uppercase text-gray-500 font-normal text-lg '>Danh mục</p>
-                <a href='#' className='flex lg:hidden items-center font-thin text-red-600 text-xs'>
+        <div className='bg-white category flex  flex-col   xl:mx-40   rounded-sm mb-1 '>
+            <div className='  flex items-center justify-between  h-14 px-2.5   '>
+                <p className='uppercase text-red-500 font-normal text-lg '>Danh mục</p>
+                <a href='#' className='flex lg:hidden items-center font-thin text-gray-600 text-xs'>
                     Xem thêm
                     <svg
                         xmlns='http://www.w3.org/2000/svg'

@@ -119,7 +119,7 @@ const MainCatalog = () => {
                         tag={"a"}
                         className='hover:scale-y-110  transition-all flex flex-col items-center justify-start cursor-pointer    '>
                         <img src={slide.imgSrc} className='w-10 h-10' alt='' />
-                        <p className='text-[12px] text-center font-normal line-clamp-2   md:text-sm'>
+                        <p className='text-[11px] text-center font-normal line-clamp-2   md:text-sm'>
                             {slide.descr}
                         </p>
                     </SwiperSlide>

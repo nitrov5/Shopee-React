@@ -106,7 +106,7 @@ const ShopeeMall = () => {
 
             {/* Mobile */}
             <ul className='shopee-mall-title md:hidden flex items-center justify-between gap-1 py-2 text-gray-800 px-2'>
-                <li className='flex items-center'>
+                <li className='peer flex items-center'>
                     <svg
                         xmlns='http://www.w3.org/2000/svg'
                         className='h-4 w-4 flex-none'
@@ -122,7 +122,7 @@ const ShopeeMall = () => {
                     </svg>
                     <span className='text-xs  whitespace-nowrap'>Miễn phí trả hàng</span>
                 </li>
-                <li className='flex items-center'>
+                <li className='peer flex items-center'>
                     <svg
                         xmlns='http://www.w3.org/2000/svg'
                         className='h-4 w-4 flex-none'
@@ -152,8 +152,94 @@ const ShopeeMall = () => {
                             d='M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z'
                         />
                     </svg>
-                    <span className='text-xs whitespace-nowrap'>Giao miễn phí</span>
+                    <span className='peer text-xs whitespace-nowrap'>Giao miễn phí</span>
                 </li>
+                <div className='bg-slate-400   z-[100] bottom-0 left-0 right-0 top-0 absolute'>
+                    <div className="absolute
+                     top-0 left-0 right-0 bottom-0 bg-gray-800/50" />
+                    <div className='flex flex-col items-center bg-white z-[999]  bottom-0 left-0  h-1/2  '>
+                        <div className='text-gray-800 sticky top-0 bg-sky-400 w-full h-10 py-2 text-center'>
+                            Shopee Mall Assurance
+                        </div>
+                        <ul className='p-4 space-y-2  overflow-y-scroll h-48'>
+                            <li className='flex gap-2  '>
+                                <svg
+                                    xmlns='http://www.w3.org/2000/svg'
+                                    className='h-6 w-6 flex-none  '
+                                    fill='none'
+                                    viewBox='0 0 24 24'
+                                    stroke='currentColor'>
+                                    <path
+                                        strokeLinecap='round'
+                                        strokeLinejoin='round'
+                                        strokeWidth='2'
+                                        d='M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z'
+                                    />
+                                </svg>
+                                <div className='flex flex-col'>
+                                    <div className='text-gray-900  '>Miễn Phí Trả Hàng</div>
+                                    <div className='text-gray-500 py-2 text-sm'>
+                                        Ưu đãi miễn phí trả hàng trong 7 ngày để đảm bảo bạn hoàn
+                                        toàn có thể yên tâm khi mua hàng ở Shopee Mall. Bạn sẽ được
+                                        hoàn lại 100% số tiền của đơn hagnf nếu thỏa quy định về trả
+                                        hàng/hoàn tieenf của Shopee bằng cách gửi yêu cầu đến Shopee
+                                        trong 7 ngày kể từ ngày nhận được hàng.
+                                    </div>
+                                </div>
+                            </li>
+                            <li className='flex gap-2 '>
+                                <svg
+                                    xmlns='http://www.w3.org/2000/svg'
+                                    className='h-6 w-6 flex-none'
+                                    fill='none'
+                                    viewBox='0 0 24 24'
+                                    stroke='currentColor'>
+                                    <path
+                                        strokeLinecap='round'
+                                        strokeLinejoin='round'
+                                        strokeWidth='2'
+                                        d='M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z'
+                                    />
+                                </svg>
+
+                                <div className='flex flex-col'>
+                                    <div className='text-gray-900'>Chính Hãng 100%</div>
+                                    <div className='text-gray-500 py-2 text-sm'>
+                                        Cam kết 100% hàng chính hãng cho tất cả các sản phẩm từ
+                                        Shopee Mall. Bạn sẽ được hoàn lại gấp đôi số tiền bạn đã
+                                        thanh toán cho sản phẩm thuộc Shopee Mall và được chứng minh
+                                        là không chính hãng
+                                    </div>
+                                </div>
+                            </li>
+                            <li className='flex gap-2'>
+                                <svg
+                                    xmlns='http://www.w3.org/2000/svg'
+                                    className='h-6 w-6 flex-none'
+                                    fill='none'
+                                    viewBox='0 0 24 24'
+                                    stroke='currentColor'>
+                                    <path
+                                        strokeLinecap='round'
+                                        strokeLinejoin='round'
+                                        strokeWidth='2'
+                                        d='M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z'
+                                    />
+                                </svg>
+                                <div className='flex flex-col'>
+                                    <div className='text-gray-900'>Giao Miễn Phí</div>
+                                    <div className='text-gray-500 py-2 text-sm'>
+                                        Miễn phí vận chuyển lên tới 40,000đ khi mua từ Shopee Mall
+                                        với tổng thanh toán từ một Shop là 150,00đ
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                            <div className=' '>
+                                Tiếp Tục Mua Hàng
+                            </div>
+                    </div>
+                </div>
             </ul>
 
             <div className='shopee-mall-container relative flex flex-col  lg:flex-row    '>
@@ -236,7 +322,11 @@ const ShopeeMall = () => {
                                 <a
                                     href={product.aSrc}
                                     className='flex flex-col items-center    w-full  h-full   '>
-                                    <img src={product.imgSrc} alt='' className='w-full  h-full object-cover ' />
+                                    <img
+                                        src={product.imgSrc}
+                                        alt=''
+                                        className='w-full  h-full object-cover '
+                                    />
                                 </a>
                                 <p
                                     className='text-red-600  absolute -bottom-0.5 left-0 h-1/5 font-bold capitalize   truncate text-xs  whitespace-nowrap 
